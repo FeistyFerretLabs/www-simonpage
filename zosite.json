@@ -1,0 +1,15 @@
+{
+  "name": "simonpage-com",
+  "local_port": 55950,
+  "entrypoint": "bun run dev",
+  "publish": {
+    "label": "simonpage-com",
+    "type": "http",
+    "entrypoint": "bun run prod",
+    "published_port": 54475,
+    "env": {
+      "NODE_ENV": "production",
+      "ZO_CLIENT_IDENTITY_TOKEN": "none"
+    }
+  }
+}
