@@ -38,12 +38,12 @@ export default function HomePage() {
             <span className="text-[var(--brand-blue-dim)]">I'll show you how to fix that.</span>
           </h1>
           <p className="text-xl text-[var(--text-secondary)] leading-relaxed mb-4">
-            You've tried ChatGPT. You've copied "magic prompts" from YouTube. 
-            But everything it writes still sounds like... AI wrote it.
+            You've tried ChatGPT. You've copied all those "magic prompts" from YouTube. 
+            But everything it writes still sounds... well, like AI wrote it.
           </p>
           <p className="text-xl text-[var(--text-secondary)] leading-relaxed mb-8">
             I'm Simon Page. I teach creators and entrepreneurs how to use AI 
-            so they get the results they actually want — without the frustrating back-and-forth.
+            so they get the results they actually want... without the frustrating back-and-forth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" className="bg-[var(--brand-blue)] hover:bg-[var(--brand-blue-dim)]">
@@ -71,7 +71,7 @@ export default function HomePage() {
               The problem is <span className="text-white">context</span>.
             </p>
             <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-4">
-              Most people use AI like a vending machine — insert prompt, get result. 
+              Most people use AI like a vending machine... insert prompt, get result. 
               But AI doesn't know your voice. It doesn't know your audience. 
               It doesn't know what "good" looks like for you.
             </p>
@@ -79,7 +79,7 @@ export default function HomePage() {
               So it gives you the same generic slop it gives everyone else.
             </p>
             <p className="text-lg text-[var(--text-secondary)] leading-relaxed">
-              I'll show you how to fix that — permanently.
+              I'll show you how to fix that... permanently.
             </p>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function HomePage() {
               I don't do prompt hacks. I don't sell "AI magic" courses. And I definitely don't promise that AI will build your business while you sleep.
             </p>
             <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-6">
-              What I do is show you <em>why</em> AI gives you what it gives you — and how to fix it properly.
+              What I do is show you <em>why</em> AI gives you what it gives you... and how to fix it properly.
             </p>
             <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-6">
               I break down:
@@ -112,7 +112,7 @@ export default function HomePage() {
                 Guardrails that prevent AI from going off the rails (without 47 re-prompting cycles)
               </li>
               <li className="relative before:content-['→'] before:absolute before:-left-6 before:text-[var(--brand-blue-dim)]">
-                Systems that make your AI results predictable, aligned, and usable — first time
+                Systems that make your AI results predictable, aligned, and usable... first time
               </li>
             </ul>
             <p className="text-lg text-[var(--text-secondary)] leading-relaxed">
@@ -130,7 +130,7 @@ export default function HomePage() {
               Real people getting real results.
             </h2>
             <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-8">
-              Not gonna lie — getting emails like these never gets old.
+              Not gonna lie... getting emails like these never gets old.
             </p>
             
             {/* Testimonial placeholders - Miles uses email screenshots */}
@@ -151,7 +151,7 @@ export default function HomePage() {
             </div>
             
             <p className="text-lg text-[var(--text-secondary)] leading-relaxed mt-8">
-              The pattern I see? People who implement what I teach — who actually set up the structure instead of just collecting prompts — they stop fighting AI. And start getting results they can actually use.
+              The pattern I see? People who implement what I teach... who actually set up the structure instead of just collecting prompts... they stop fighting AI. And start getting results they can actually use.
             </p>
           </div>
         </div>
@@ -191,7 +191,7 @@ export default function HomePage() {
               Where to start.
             </h2>
             <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-6">
-              The best place to begin is my YouTube channel. I've got free tutorials that walk through the core framework — context, direction, guardrails, systems.
+              The best place to begin is my YouTube channel. I've got free tutorials that walk through the core framework... context, direction, guardrails, systems.
             </p>
             <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-8">
               No ads. No pitches. Just practical breakdowns of how to make AI work for you.
