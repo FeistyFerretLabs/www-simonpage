@@ -1,9 +1,9 @@
 {
-  "name": "simonpage-com",
+  "name": "www-simonpage",
   "local_port": 55950,
   "entrypoint": "bun run dev",
   "publish": {
-    "label": "simonpage-com",
+    "label": "www-simonpage",
     "type": "http",
     "entrypoint": "bun run prod",
     "published_port": 54475,

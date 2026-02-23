@@ -1,281 +1,236 @@
-import {
-  IconRocket,
-  IconCode,
-  IconDatabase,
-  IconCloud,
-  IconCheck,
-  IconBrandGithub,
-} from "@tabler/icons-react";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 
 /**
- * Marketing/Landing page demo - professional landing page template.
- *
- * This demo shows how to build a polished marketing site with:
- * - Hero section with CTA
- * - Features grid
- * - Pricing/plans section
- * - Testimonials
- * - Footer with links
- *
- * Fully responsive and theme-aware. Customize colors, copy, and layout
- * to match your product or service.
+ * Simon Page Business Website - Homepage
+ * 
+ * Dark aesthetic. Miles Beckler-style conversational copy.
+ * Written like a letter, not a landing page.
  */
 
-const features = [
-  {
-    icon: IconCode,
-    title: "Developer-Friendly",
-    description:
-      "Built with modern web technologies. Full TypeScript support and hot reload.",
-  },
-  {
-    icon: IconDatabase,
-    title: "Data Persistence",
-    description:
-      "SQLite databases included. Store and query data without external services.",
-  },
-  {
-    icon: IconCloud,
-    title: "Self-Hosted",
-    description:
-      "Run on your own infrastructure. Full control over your data and deployment.",
-  },
-  {
-    icon: IconRocket,
-    title: "Fast Deployment",
-    description:
-      "Go from idea to production in minutes. No complex setup or configuration.",
-  },
-];
-
-const plans = [
-  {
-    name: "Starter",
-    price: "$0",
-    period: "forever",
-    features: [
-      "Up to 3 sites",
-      "1GB storage",
-      "Community support",
-      "Basic templates",
-    ],
-  },
-  {
-    name: "Pro",
-    price: "$19",
-    period: "per month",
-    features: [
-      "Unlimited sites",
-      "50GB storage",
-      "Priority support",
-      "Advanced templates",
-      "Custom domains",
-      "SSL certificates",
-    ],
-    popular: true,
-  },
-  {
-    name: "Enterprise",
-    price: "Custom",
-    period: "contact us",
-    features: [
-      "Everything in Pro",
-      "Dedicated support",
-      "SLA guarantees",
-      "Team collaboration",
-      "Advanced security",
-    ],
-  },
-];
-
-export default function MarketingDemo() {
+export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-background to-background" />
-        <div className="relative mx-auto max-w-7xl px-6 py-24 md:py-32">
-          <div className="mx-auto max-w-3xl text-center">
-            <Badge variant="outline" className="mb-6">
-              <IconRocket className="mr-1 size-3" />
-              Now in Beta
-            </Badge>
-            <h1 className="mb-6 text-5xl font-bold tracking-tight md:text-6xl lg:text-7xl">
-              Build web apps on{" "}
-              <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                your computer
-              </span>
-            </h1>
-            <p className="mb-8 text-xl text-muted-foreground md:text-2xl">
-              Create, host, and publish websites and services without managing
-              servers. Everything runs on your Zo Computer.
+    <div className="min-h-screen">
+      {/* Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-[var(--bg-primary)]/80 backdrop-blur-sm">
+        <div className="section-content flex items-center justify-between h-16 px-6">
+          <div className="flex items-center gap-2">
+            <img src="/images/logo.png" alt="Simon Page" className="h-8 w-8" />
+            <span className="font-semibold text-lg">Simon Page</span>
+          </div>
+          <nav className="hidden md:flex items-center gap-8 text-sm text-[var(--text-secondary)]">
+            <a href="#start-here" className="hover:text-white transition">Start Here</a>
+            <a href="#about" className="hover:text-white transition">About</a>
+            <a href="#resources" className="hover:text-white transition">Free Resources</a>
+            <a href="https://youtube.com" target="_blank" className="hover:text-white transition">YouTube</a>
+          </nav>
+          <Button variant="outline" size="sm" className="hidden md:flex">
+            Subscribe
+          </Button>
+        </div>
+      </header>
+
+      {/* Hero - Conversational */}
+      <section className="pt-32 pb-20 px-6">
+        <div className="section-content max-w-3xl">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+            AI keeps giving you generic slop.
+            <br />
+            <span className="text-[var(--brand-blue-dim)]">I'll show you how to fix that.</span>
+          </h1>
+          <p className="text-xl text-[var(--text-secondary)] leading-relaxed mb-4">
+            You've tried ChatGPT. You've copied "magic prompts" from YouTube. 
+            But everything it writes still sounds like... AI wrote it.
+          </p>
+          <p className="text-xl text-[var(--text-secondary)] leading-relaxed mb-8">
+            I'm Simon Page. I teach creators and entrepreneurs how to use AI 
+            so they get the results they actually want — without the frustrating back-and-forth.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button size="lg" className="bg-[var(--brand-blue)] hover:bg-[var(--brand-blue-dim)]">
+              Get the Free Guide
+            </Button>
+            <Button size="lg" variant="outline" className="border-white/20">
+              Watch on YouTube
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* The Problem - Letter style */}
+      <section className="section-frame py-20 bg-[var(--bg-secondary)]">
+        <div className="section-content px-6">
+          <div className="max-w-3xl">
+            <h2 className="text-2xl font-semibold mb-6">
+              Here's the thing no one tells you.
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-4">
+              The problem isn't the AI. It's not the prompt you copied. 
+              And it's definitely not that you're "bad at this."
             </p>
-            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button size="lg" className="w-full sm:w-auto">
-                Get Started Free
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-4">
+              The problem is <span className="text-white">context</span>.
+            </p>
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-4">
+              Most people use AI like a vending machine — insert prompt, get result. 
+              But AI doesn't know your voice. It doesn't know your audience. 
+              It doesn't know what "good" looks like for you.
+            </p>
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-4">
+              So it gives you the same generic slop it gives everyone else.
+            </p>
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed">
+              I'll show you how to fix that — permanently.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* The Approach - Story-driven */}
+      <section className="section-frame py-20">
+        <div className="section-content px-6">
+          <div className="max-w-3xl">
+            <h2 className="text-2xl font-semibold mb-6">
+              What I teach is different.
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-6">
+              I don't do prompt hacks. I don't sell "AI magic" courses. And I definitely don't promise that AI will build your business while you sleep.
+            </p>
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-6">
+              What I do is show you <em>why</em> AI gives you what it gives you — and how to fix it properly.
+            </p>
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-6">
+              I break down:
+            </p>
+            <ul className="text-lg text-[var(--text-secondary)] leading-relaxed space-y-3 mb-6 pl-6">
+              <li className="relative before:content-['→'] before:absolute before:-left-6 before:text-[var(--brand-blue-dim)]">
+                Why the same prompt gives you different results (and how to make it consistent)
+              </li>
+              <li className="relative before:content-['→'] before:absolute before:-left-6 before:text-[var(--brand-blue-dim)]">
+                The hidden "context layer" that determines whether AI sounds like you or like a robot
+              </li>
+              <li className="relative before:content-['→'] before:absolute before:-left-6 before:text-[var(--brand-blue-dim)]">
+                Guardrails that prevent AI from going off the rails (without 47 re-prompting cycles)
+              </li>
+              <li className="relative before:content-['→'] before:absolute before:-left-6 before:text-[var(--brand-blue-dim)]">
+                Systems that make your AI results predictable, aligned, and usable — first time
+              </li>
+            </ul>
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed">
+              And I teach it all for free on my YouTube channel.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof - Real style */}
+      <section className="section-frame py-20 bg-[var(--bg-secondary)]">
+        <div className="section-content px-6">
+          <div className="max-w-3xl">
+            <h2 className="text-2xl font-semibold mb-6">
+              Real people getting real results.
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-8">
+              Not gonna lie — getting emails like these never gets old.
+            </p>
+            
+            {/* Testimonial placeholders - Miles uses email screenshots */}
+            <div className="space-y-6">
+              <div className="p-6 rounded-lg border border-white/10 bg-white/[0.02]">
+                <p className="text-[var(--text-secondary)] italic mb-4">
+                  "I've watched 50+ AI videos and yours was the first one that actually explained WHY I was getting garbage instead of just giving me another prompt to copy..."
+                </p>
+                <p className="text-sm text-[var(--text-muted)]">— Real email from a subscriber (placeholder)</p>
+              </div>
+              
+              <div className="p-6 rounded-lg border border-white/10 bg-white/[0.02]">
+                <p className="text-[var(--text-secondary)] italic mb-4">
+                  "Finally someone who treats AI like a tool, not a magic trick. Your framework completely changed how I work with ChatGPT..."
+                </p>
+                <p className="text-sm text-[var(--text-muted)]">— Real email from a subscriber (placeholder)</p>
+              </div>
+            </div>
+            
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed mt-8">
+              The pattern I see? People who implement what I teach — who actually set up the structure instead of just collecting prompts — they stop fighting AI. And start getting results they can actually use.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* About / Story */}
+      <section className="section-frame py-20" id="about">
+        <div className="section-content px-6">
+          <div className="max-w-3xl">
+            <h2 className="text-2xl font-semibold mb-6">
+              Why I do this.
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-6">
+              I've been in the AI space long enough to see the pattern.
+            </p>
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-6">
+              Beginners don't fail because they lack intelligence. They fail because they were sold unrealistic framing. AI is powerful, but it's not magic. It amplifies structure. If your structure is weak, it amplifies chaos. If your structure is sound, it amplifies capability.
+            </p>
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-6">
+              Most AI content out there is hype. "AI will replace you!" "This one prompt changed everything!" "Build a business in 5 minutes with ChatGPT!"
+            </p>
+            <p className="text-lg text-[var(--text-primary)] leading-relaxed mb-6">
+              That's noise. I'm here for the signal.
+            </p>
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed">
+              I teach in public. I explain mechanisms fully. I don't withhold knowledge to create artificial scarcity. If someone never buys anything from me, they should still benefit meaningfully from my free content.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA - Clear path */}
+      <section className="section-frame py-20 bg-[var(--bg-secondary)]">
+        <div className="section-content px-6">
+          <div className="max-w-3xl">
+            <h2 className="text-2xl font-semibold mb-6">
+              Where to start.
+            </h2>
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-6">
+              The best place to begin is my YouTube channel. I've got free tutorials that walk through the core framework — context, direction, guardrails, systems.
+            </p>
+            <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-8">
+              No ads. No pitches. Just practical breakdowns of how to make AI work for you.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button size="lg" className="bg-[var(--brand-blue)] hover:bg-[var(--brand-blue-dim)]">
+                Subscribe on YouTube
               </Button>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto">
-                <IconBrandGithub className="mr-2 size-5" />
-                View on GitHub
+              <Button size="lg" variant="outline">
+                Get the Free Framework
               </Button>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
-        <div className="mb-16 text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
-            Everything you need to build
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Powerful features that make development simple and fast
-          </p>
-        </div>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {features.map((feature) => (
-            <Card key={feature.title} className="border-muted">
-              <CardHeader>
-                <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                  <feature.icon className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle className="text-xl">{feature.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{feature.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="bg-muted/50 py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="mb-16 text-center">
-            <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
-              Simple, transparent pricing
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Choose the plan that's right for you
+            
+            <p className="text-base text-[var(--text-muted)] mt-8">
+              I also send out helpful emails about once a week. Practical stuff, no fluff. You can sign up below.
             </p>
           </div>
-          <div className="grid gap-8 md:grid-cols-3">
-            {plans.map((plan) => (
-              <Card
-                key={plan.name}
-                className={
-                  plan.popular ? "border-primary shadow-lg" : "border-muted"
-                }
-              >
-                {plan.popular && (
-                  <div className="bg-primary px-4 py-2 text-center text-sm font-medium text-primary-foreground">
-                    Most Popular
-                  </div>
-                )}
-                <CardHeader className="text-center">
-                  <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                  <div className="mt-4">
-                    <span className="text-4xl font-bold">{plan.price}</span>
-                    <span className="text-muted-foreground">
-                      {" "}
-                      / {plan.period}
-                    </span>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    {plan.features.map((feature) => (
-                      <li key={feature} className="flex items-start gap-2">
-                        <IconCheck className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button
-                    className="mt-6 w-full"
-                    variant={plan.popular ? "default" : "outline"}
-                  >
-                    {plan.name === "Enterprise"
-                      ? "Contact Sales"
-                      : "Get Started"}
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
-        <Card className="border-primary/20 bg-gradient-to-br from-primary/10 via-primary/5 to-background">
-          <CardContent className="p-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
-              Ready to get started?
-            </h2>
-            <p className="mb-8 text-lg text-muted-foreground">
-              Join thousands of developers building on Zo Computer
-            </p>
-            <Button size="lg">Create Your First Site</Button>
-          </CardContent>
-        </Card>
       </section>
 
       {/* Footer */}
-      <footer className="border-t bg-muted/30">
-        <div className="mx-auto max-w-7xl px-6 py-12">
-          <div className="grid gap-8 md:grid-cols-4">
-            <div>
-              <h3 className="mb-4 font-semibold">Product</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>Features</li>
-                <li>Pricing</li>
-                <li>Documentation</li>
-                <li>Changelog</li>
-              </ul>
+      <footer className="border-t border-white/5 py-12">
+        <div className="section-content px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[var(--text-muted)]">
+            <div className="flex items-center gap-2">
+              <img src="/images/logo.png" alt="Simon Page" className="h-5 w-5" />
+              <span>© 2026 Simon Page</span>
             </div>
-            <div>
-              <h3 className="mb-4 font-semibold">Company</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>About</li>
-                <li>Blog</li>
-                <li>Careers</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="mb-4 font-semibold">Resources</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>Community</li>
-                <li>Help Center</li>
-                <li>Status</li>
-                <li>API Reference</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="mb-4 font-semibold">Legal</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>Privacy</li>
-                <li>Terms</li>
-                <li>Security</li>
-                <li>Compliance</li>
-              </ul>
-            </div>
+            <nav className="flex items-center gap-6">
+              <a href="#" className="hover:text-white transition">About</a>
+              <a href="#" className="hover:text-white transition">YouTube</a>
+              <a href="#" className="hover:text-white transition">Contact</a>
+              <a href="#" className="hover:text-white transition">Privacy</a>
+            </nav>
           </div>
-          <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
-            <p>© 2025 Zo Computer. This is a demo marketing page template.</p>
-          </div>
+          <p className="text-xs text-[var(--text-muted)] mt-6 text-center">
+            I share tools and resources I use myself. Some links are affiliate links, which means I may earn a commission if you make a purchase.
+          </p>
         </div>
       </footer>
     </div>
